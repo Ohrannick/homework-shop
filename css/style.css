@@ -483,9 +483,6 @@ body {
   color: var(--light-gray);
 }
 
-.footer-bottom__nav {
-}
-
 .footer__icon {
   cursor: pointer;
   fill: var(--black);
@@ -661,9 +658,6 @@ body {
 
 .registation__desc__text {
   margin: 22px 0 22px 0;
-}
-
-.registation__desc__item {
 }
 
 .registation__desc__list {
