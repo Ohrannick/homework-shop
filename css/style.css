@@ -54,6 +54,7 @@ body {
 
 .header {
   background-color: var(--dark-blue);
+  position: relative;
 }
 
 .header__wrapper {
@@ -91,7 +92,65 @@ body {
 }
 
 .header__nav {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  content: '';
+  position: absolute;
+  min-width: 232px;
+  height: 765px;
+  background: var(--white);
+  top: 75px;
+  right: 1px;
+  z-index: 1;
+}
+
+.header__nav:after {
+  content: '';
+  width: 100%;     /* Ширина тени */
+  height: 10px;    /* Высота тени */
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5); /* Тень */
+  z-index: -1;     /* Опускаем ниже блока */
+}
+
+.header__title {
+  display: flex;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 37px 0 5px 34px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header__nav-list {
+  margin-left: 34px;
+  height: 100%;
+}
+
+.nav__item {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.nav-item__link {
+  display: flex;
+  color: var(--dark-pink);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.nav-item__sub-list {
+  margin-left: 28px;
+}
+
+.nav-item__sub-item {
+  display: flex;
+  font-weight: normal;
+  line-height: 17px;
+  margin-bottom: 16px;
+  color: var(--dark-gray);
 }
 
 .header__button {
