@@ -695,7 +695,7 @@ body {
   display: flex;
 }
 
-.footer-bottom .footer-bottom__list .footer__icon {
+.footer-bottom .footer-bottom__list .footer-bottom__icon {
   cursor: pointer;
   fill: #000000;
   background-color: #FFFFFF;
@@ -705,15 +705,15 @@ body {
   padding: 5px;
 }
 
-.footer-bottom .footer-bottom__list .footer__icon:hover, .footer-bottom .footer-bottom__list .footer__icon:focus {
+.footer-bottom .footer-bottom__list .footer-bottom__icon:hover, .footer-bottom .footer-bottom__list .footer-bottom__icon:focus {
   fill: #F16D7D;
 }
 
-.footer-bottom .footer-bottom__list .footer__icon:active {
+.footer-bottom .footer-bottom__list .footer-bottom__icon:active {
   opacity: 0.3;
 }
 
-.footer-bottom .footer-bottom__list .footer__icon-pink {
+.footer-bottom .footer-bottom__list .footer-bottom__icon-pink {
   cursor: pointer;
   fill: #FFFFFF;
   background-color: #F16D7D;
@@ -723,12 +723,12 @@ body {
   padding: 5px;
 }
 
-.footer-bottom .footer-bottom__list .footer__icon-pink:hover, .footer-bottom .footer-bottom__list .footer__icon-pink:focus {
+.footer-bottom .footer-bottom__list .footer-bottom__icon-pink:hover, .footer-bottom .footer-bottom__list .footer-bottom__icon-pink:focus {
   fill: #F16D7D;
   background-color: #FFFFFF;
 }
 
-.footer-bottom .footer-bottom__list .footer__icon-pink:active {
+.footer-bottom .footer-bottom__list .footer-bottom__icon-pink:active {
   opacity: 0.3;
 }
 
