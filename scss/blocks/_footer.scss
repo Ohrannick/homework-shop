@@ -96,7 +96,7 @@
   .footer-bottom__list {
     display: flex;
 
-    .footer__icon {
+    .footer-bottom__icon {
       cursor: pointer;
       fill: $black;
       background-color: $white;
@@ -115,7 +115,7 @@
       }
     }
 
-    .footer__icon-pink {
+    .footer-bottom__icon-pink {
       cursor: pointer;
       fill: $white;
       background-color: $dark-pink;
