@@ -1,0 +1,121 @@
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 95px;
+}
+
+.products__heading {
+  @include font (30px, 36px, normal);
+  text-align: center;
+  color: $dark-blue;
+}
+
+.products__text {
+  @include font (14px, 17px, normal);
+  text-align: center;
+  color: $gray;
+}
+
+.products__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.products__item {
+  width: 360px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+
+  .products__item-cart {
+    position: relative;
+
+    &:hover {
+      .products__item-shadow {
+        display: block;
+      }
+    }
+  }
+
+  .products__item-shadow {
+    content: '';
+    width: 100%;
+    min-height: 420px;
+    position: absolute;
+    background: rgba(58, 56, 56, 0.76);
+    top: 0;
+    display: none;
+  }
+
+  .products__item-button {
+    padding: 10px;
+    min-width: 140px;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include font (14px, 17px, normal);
+    text-align: end;
+    color: $white;
+    border: 2px solid $white;
+    cursor: pointer;
+    background: none;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/basket-icon.svg);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      left: 5px;
+      top: 4px;
+    }
+  }
+
+  .products__desc {
+    padding: 24px 17px 20px 29px;
+    align-items: flex-start;
+    background: $light-gray;
+
+    .products__item-heading {
+      @include font (13px, 16px, normal);
+      text-transform: uppercase;
+      color: $black;
+    }
+
+    .products__item-text {
+      @include font (14px, 17px, 300);
+      color: $dark-gray;
+      padding: 13px 0 18px 0;
+    }
+
+    .products__item-price {
+      @include font (16px, 19px, normal);
+      color: $dark-pink;
+    }
+  }
+}
+
+.products__button {
+  width: 211px;
+  padding: 20px;
+  box-sizing: border-box;
+  @include font (16px, 19px, normal);
+  align-self: center;
+  color: $dark-pink;
+  background: none;
+  border: 1px solid $dark-pink;
+  margin-top: 19px;
+  cursor: pointer;
+
+  &:focus, &:hover {
+    outline-style: none;
+    background: $dark-pink;
+    color: $white;
+  }
+}

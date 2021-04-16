@@ -1,0 +1,150 @@
+.title {
+
+  .title__heading {
+    display: flex;
+    min-height: 148px;
+    background-color: $light-pink;
+    align-items: center;
+  }
+
+  .title__text {
+    color: $dark-pink;
+    text-transform: uppercase;
+    @include font (24px, 29px, normal);
+  }
+}
+
+.registration {
+  display: flex;
+
+  .registration__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    margin: 64px 128px 96px 0;
+
+      .registration__form-name {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .registration__form-text {
+        @include font (16px, 19px, 300);
+      }
+
+      .registration__form-input {
+        @include font (13px, 16px, 300);
+        border: 2px solid $light-pink;
+        min-height: 35px;
+        color: $mid-gray;
+        padding: 10px;
+        margin-top: 21px;
+
+        &:hover {
+          outline: 2px solid $dark-pink;
+          background: $white;
+          cursor: text;
+        }
+      }
+
+      .registration__form-gender {
+        @include font (11px, 13px, 300);
+        color: $black;
+        margin: 35px 0;
+      }
+
+      .registration__form-radio-input {
+        display: none;
+
+        &:checked+.registration__form-radio-label {
+          &:after {
+            background: $light-pink;
+          }
+        }
+      }
+
+      .registration__form-radio-label {
+        margin: 0 0 0 30px;
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+          content: '';
+          width: 15px;
+          height: 15px;
+          border: 1px solid;
+          border-radius: 50%;
+          position: absolute;
+          left: -22px;
+          top: -2px;
+        }
+      }
+
+      .registration__form-help {
+        @include font (13px, 16px, 300);
+        color: $mid-gray;
+        margin: 16px 0 39px 0;
+      }
+
+      .registration__form-button {
+        padding: 15px;
+        min-width: 167px;
+        align-self: flex-start;
+        position: relative;
+        @include font (14px, 17px, normal);
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $dark-pink;
+        color: $white;
+        border: 2px solid $dark-pink;
+        cursor: pointer;
+
+        &:after {
+          content: '';
+          position: absolute;
+          background-image: url(../img/arrow-right.svg);
+          width: 17px;
+          height: 10px;
+          right: 15px;
+          top: 18px;
+        }
+
+        &:hover {
+          background-color: transparent;
+          color: $dark-pink;
+        }
+      }
+  }
+  
+  .description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    max-width: 650px;
+    @include font (24px, 29px, 300);
+    color: $black;
+
+    .description__heading {
+      text-transform: uppercase;
+    }
+
+    .description__text {
+      margin: 22px 0 22px 0;
+    }
+
+    .description__item {
+      margin: 0 0 16px 55px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: -50px;
+        background-image: url(../img/check.svg);
+        width: 20px;
+        height: 16px;
+      }
+    }
+  }
+}

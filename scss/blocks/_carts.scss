@@ -1,0 +1,188 @@
+.carts {
+  display: flex;
+
+  .carts__items {
+    flex-direction: column;
+    margin-top: 96px;
+
+    .carts__item {
+      display: flex;
+      box-shadow: 12px 7px 7px 1px rgba(34, 60, 80, 0.35);
+      margin-bottom: 40px;
+
+      .carts__item-description {
+        min-width: 390px;
+        margin-left: 32px;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          background-image: url(../../img/close.svg);
+          bottom: 270px;
+          right: 28px;
+          width: 18px;
+          height: 18px;
+          cursor: pointer;
+        }
+
+        .carts__item-heading {
+          @include font (24px, 29px, normal);
+          margin: 22px 0 42px 0;
+          text-transform: uppercase;
+          max-width: 210px;
+        }
+
+        .carts__item-text {
+          @include font (22px, 26px, normal);
+          margin-bottom: 6px;
+          color: $dark-gray;
+
+          .carts__item-text-pink {
+            color: $dark-pink;
+          }
+        }
+        .carts__item-text input {
+          @include font (18px, 22px, normal);
+          margin-left: 24px;
+          max-width: 44px;
+          text-align: center;
+          border-color: $light-gray;
+        }
+      }
+    }
+
+    .carts__buttons {
+      display: flex;
+      justify-content: space-around;
+      margin: 70px 0 128px 0;
+
+      .carts__button {
+        padding: 15px;
+        min-width: 230px;
+        @include font (14px, 17px, 300);
+        text-transform: uppercase;
+        background-color: $white;
+        color: $black;
+        border: 2px solid $mid-gray;
+        cursor: pointer;
+
+        &:hover {
+          border: 2px solid $dark-pink;
+        }
+      }
+    }
+  }
+
+  .carts__registration {
+    min-width: 360px;
+    flex-direction: column;
+    margin: 96px 0 0 130px;
+
+    .carts__registration-form {
+      display: flex;
+      flex-direction: column;
+
+      .carts__registration-text {
+        @include font (16px, 19px, 300);
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 20px;
+      }
+
+      .carts__registration-input {
+        min-width: 350px;
+        min-height: 35px;
+        @include font (13px, 16px, 300);
+        border: 2px solid $light-pink;
+        min-height: 35px;
+        color: $mid-gray;
+        padding: 10px;
+        margin-top: 21px;
+
+        &:hover {
+          outline: 2px solid $dark-pink;
+          background: $white;
+          cursor: text;
+        }
+      }
+
+      .carts__button {
+        margin: 24px 0 58px 0;
+        padding: 15px;
+        @include font (14px, 17px, 300);
+        text-transform: uppercase;
+        background-color: $white;
+        color: $dark-gray;
+        border: 2px solid $mid-gray;
+        cursor: pointer;
+
+        &:hover {
+          border: 2px solid $dark-pink;
+        }
+      }
+
+    }
+
+    .carts__registration-total {
+      min-width: 294px;
+      min-height: 150px;
+      background-color: $light-gray;
+      padding: 37px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        border: 1px solid $mid-gray;
+        width: 79%;
+        top: 120px;
+      }
+
+      .carts__registration-total-sub {
+        @include font (11px, 13px, normal);
+        text-transform: uppercase;
+        margin-top: 12px;
+        margin-bottom: 18px;
+
+        span {
+          margin-left: 20px;
+        }
+      }
+
+      .carts__registration-total-all {
+        @include font (16px, 19px, 300);
+        text-transform: uppercase;
+        margin-bottom: 42px;
+        
+        .carts__registration-total-pink {
+          color: $dark-pink;
+          margin-left: 18px;
+        }
+      }
+
+      .carts__registration-button {
+        padding: 15px;
+        width: 100%;
+        align-self: flex-start;
+        position: relative;
+        @include font (16px, 19px, 300);
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $dark-pink;
+        color: $light-gray;
+        border: 2px solid $dark-pink;
+        cursor: pointer;
+
+        &:hover {
+          background-color: transparent;
+          color: $dark-pink;
+        }
+      }      
+    }
+  }
+  
+}
