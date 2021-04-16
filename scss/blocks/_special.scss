@@ -1,0 +1,27 @@
+.spec-section {
+  min-height: 341px;
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .spec-section__list {
+    display: flex;
+  }
+
+  .spec-section__item {
+    width: 360px;
+    text-align: center;
+
+    .spec-section__item-heading {
+      @include font (20px, 24px, normal);
+      color: $light-gray;
+      margin: 19px 0 16px 0;
+    }
+
+    .spec-section__item-text {
+      @include font (14px, 17px, 300);
+      color: $light-gray;
+    }
+  }
+}
