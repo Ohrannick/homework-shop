@@ -1,44 +1,82 @@
 .footer-top {
   min-height: 448px;
   background-image: url(../img/footer.jpg);
-  background-repeat: round;
+  background-size: cover;
   display: flex;
   align-items: center;
+  padding-top: 54px;
 
   .footer-top__list {
     display: flex;
     justify-content: space-around;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .footer-top__item {
     max-width: 360px;
     text-align: center;
 
+    @include tablet {
+      margin-bottom: 48px;
+    }
+
     .footer-top__item-img {
       border-radius: 50%;
     }
 
     .footer-top__item-text {
-      @include font (20px, 24px, normal);
+      @include font (20px, 24px);
       margin-top: 10px;
+
+      @include tablet {
+        @include font (19px, 23px);
+      }
     }
 
     .footer-top__heading {
       margin-top: 25px;
-      @include font (24px, 29px, bold);
+      @include font (24px, 38px, 700);
       text-transform: uppercase;
+
+      @include tablet {
+        @include font (18px, 28px, 700);
+      }
+
+      @include mobile {
+        @include font (24px, 37px, 700);
+      }
     }
 
     .footer-top__sub-heading {
-      @include font (18px, 29px);
+      @include font (18px, 30px);
       text-transform: uppercase;
       display: block;
+
+      @include tablet {
+        @include font (18px, 29px);
+      }
+
+      @include mobile {
+        @include font (14px, 22px);
+      }
     }
 
     .footer-top__form {
       display: flex;
       margin-top: 32px;
       min-height: 49px;
+
+      @include tablet {
+        padding-bottom: 140px;
+      }
+
+      @include mobile {
+        padding-bottom: 110px;
+      }
 
       .footer-top__input {
         min-width: 250px;
@@ -87,6 +125,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      padding-top: 43px;
+      padding-bottom: 9px;
+    }
 
     .footer-bottom__copyright {
       @include font (16px, 19px, normal);

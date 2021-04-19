@@ -1,5 +1,14 @@
 .header {
   background-color: $dark-blue;
+  padding: 0 16px;
+
+  @include tablet {
+    padding: 0 32px;
+  }
+
+  @include mobile {
+    padding: 0 16px;
+  }
 
   .header__wrapper {
     min-height: 75px;
@@ -54,6 +63,11 @@
     z-index: 1;
     display: none;
 
+    @include mobile {
+      left: 50%;
+      max-width: $mobile-width;
+    }
+
     &:after {
       content: '';
       display: block;
@@ -74,6 +88,16 @@
 
   .header__link {
     margin: 0 0 0 34px;
+
+    @include tablet {
+      margin: 0 0 0 25px;
+    }
+
+    &--mobile-hidden {
+      @include mobile {
+        display: none;
+      }
+    }
   }
 
   .header__title {

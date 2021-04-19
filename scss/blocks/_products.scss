@@ -1,9 +1,19 @@
 .products {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   flex-direction: column;
+  margin-top: 97px; 
   margin-bottom: 95px;
+  max-width: 1140px;
+
+  @include tablet {
+    margin-top: 154px;
+    margin-bottom: 65px;
+  }
+
+  @include mobile {
+    margin-top: 64px;
+    margin-bottom: 97px;
+  }
 }
 
 .products__heading {
@@ -23,12 +33,20 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 50px;
+
+  @include tablet {
+    justify-content: center;
+  }
 }
 
 .products__item {
   width: 360px;
-  padding-bottom: 20px;
   margin-bottom: 30px;
+
+  @include tablet {
+    margin-right: 16px;
+    margin-bottom: 17px;
+  }
 
   .products__item-cart {
     position: relative;
