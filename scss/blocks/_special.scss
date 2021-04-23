@@ -7,11 +7,21 @@
 
   .spec-section__list {
     display: flex;
+
+    @include tablet {
+      display: block;
+      flex-wrap: wrap;
+    }
   }
 
   .spec-section__item {
     width: 360px;
     text-align: center;
+
+    @include tablet {
+      margin-top: 48px;
+      padding-bottom: 64px;
+    }
 
     .spec-section__item-heading {
       @include font (20px, 24px, normal);

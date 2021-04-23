@@ -13,6 +13,18 @@
     justify-content: center;
     text-transform: uppercase;
     background-repeat: no-repeat;
+    background-size: cover;
+
+    @include tablet {
+      width: 32%;
+      min-height: 168px;
+    }
+
+    @include mobile {
+      width: 100%;
+      min-height: 247px;
+      margin-bottom: 32px;
+    }
 
     &--woman {
       background-image: url(../img/forwomen.jpg);
@@ -31,17 +43,26 @@
       width: 100%;
       min-height: 180px;
       margin-top: 30px;
-      margin-bottom: 97px;
+      margin-bottom: 0;
+
+      @include tablet {
+        min-height: 116px;
+      }
+
+      @include mobile {
+        min-height: 111px;
+        margin-top: 0;
+      }
     }
   }
 
   .categories__text {
-    @include font (16px, 19px, normal);
+    @include font (16px, 19px);
     color: $white;
   }
 
   .categories__heading {
-    @include font (20px, 19px, normal);
+    @include font (24px, 29px, 700);
     color: $dark-pink;
   }
 }
