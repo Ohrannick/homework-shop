@@ -62,23 +62,11 @@
     left: auto;
     z-index: 1;
     display: none;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 
     @include mobile {
       left: 50%;
       max-width: $mobile-width;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      width: 100%;
-      /* Ширина тени */
-      height: 10px;
-      /* Высота тени */
-      box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
-      /* Тень */
-      z-index: 1;
-      /* Опускаем ниже блока */
     }
 
     &:hover {
