@@ -613,6 +613,11 @@ body {
   color: #FFFFFF;
 }
 
+.far {
+  font-size: 25px;
+  color: pink;
+}
+
 .spec-section {
   min-height: 341px;
   background-color: #222222;
@@ -889,68 +894,6 @@ body {
 
 .footer-bottom .footer-bottom__list .footer-bottom__icon-pink:active {
   opacity: 0.3;
-}
-
-.title {
-  background-color: #F7E4E2;
-}
-
-.title .title__heading {
-  display: flex;
-  min-height: 148px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@media (max-width: 766px) {
-  .title .title__heading {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-}
-
-.title .title__heading .title__text {
-  color: #F16D7D;
-  text-transform: uppercase;
-  font-size: 24px;
-  line-height: 29px;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media (max-width: 766px) {
-  .title .title__heading .title__text {
-    text-align: center;
-  }
-}
-
-.title .title__heading .title__list {
-  display: flex;
-}
-
-.title .title__heading .title__list .title__item {
-  display: flex;
-  margin-left: 10px;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 400;
-  font-style: normal;
-  color: #5D5D5D;
-}
-
-.title .title__heading .title__list .title__item .title__item-flash {
-  display: inline;
-  padding-left: 10px;
-}
-
-.title .title__heading .title__list .title__item .title__item-link:hover {
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 700;
-  font-style: normal;
-  color: #F16D7D;
-  text-decoration: underline;
 }
 
 .registration {
@@ -1525,6 +1468,99 @@ body {
   color: #F16D7D;
 }
 
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  border: 1px solid #EBEBEB;
+  width: 283px;
+  height: 43px;
+}
+
+.catalog .catalog__item {
+  margin: 0 7px 0 7px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  font-style: normal;
+  color: #6F6E6E;
+}
+
+.catalog .catalog__item-link:hover {
+  color: #F16D7D;
+  font-weight: bold;
+}
+
+.catalog .catalog__item .catalog__arrow {
+  font-size: 18px;
+  line-height: 0px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.title {
+  background-color: #F7E4E2;
+}
+
+.title .title__heading {
+  display: flex;
+  min-height: 148px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 766px) {
+  .title .title__heading {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+.title .title__heading .title__text {
+  color: #F16D7D;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (max-width: 766px) {
+  .title .title__heading .title__text {
+    text-align: center;
+  }
+}
+
+.title .title__heading .title__list {
+  display: flex;
+}
+
+.title .title__heading .title__list .title__item {
+  display: flex;
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  font-style: normal;
+  color: #5D5D5D;
+}
+
+.title .title__heading .title__list .title__item .title__item-flash {
+  display: inline;
+  padding-left: 10px;
+}
+
+.title .title__heading .title__list .title__item .title__item-link:hover {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  font-style: normal;
+  color: #F16D7D;
+  text-decoration: underline;
+}
+
 .filter {
   display: flex;
   justify-content: flex-start;
@@ -1683,8 +1719,6 @@ body {
 }
 
 .filter .filter__check .filter__check-lists .filter__check-items {
-  display: flex;
-  text-transform: uppercase;
   font-size: 14px;
   line-height: 17px;
   font-weight: 400;
@@ -1694,12 +1728,18 @@ body {
 }
 
 .filter .filter__check .filter__check-lists .filter__check-items .filter__check-button {
+  display: flex;
+  text-transform: uppercase;
   border: none;
   background-color: transparent;
   margin-left: 10px;
   position: relative;
-  min-height: 20px;
   cursor: pointer;
+}
+
+.filter .filter__check .filter__check-lists .filter__check-items .filter__check-button .filter__icon {
+  margin-top: 3px;
+  margin-left: 7px;
 }
 
 .filter .filter__check .filter__check-lists .filter__check-items .filter__check-button:hover + .filter__check-list {
