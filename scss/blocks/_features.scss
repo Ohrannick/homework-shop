@@ -1,0 +1,194 @@
+.features {
+  margin-top: -65px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  background-color: $white;
+
+  @include tablet {
+    margin-top: 0px;
+  }
+
+  .features__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .features__head {
+      @include font(14px, 17px, 300);
+      text-transform: uppercase;
+      color: $dark-pink;
+      margin-top: 64px;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 63px;
+        height: 3px;
+        background-color: $dark-pink;
+        position: absolute;
+        bottom: -12px;
+        left: 38px;
+      }
+    }
+
+    .features__heading {
+      @include font(18px, 22px, 300);
+      text-transform: uppercase;
+      color: $dark-gray;
+      margin-top: 28px;
+    }
+
+    .features__text {
+      @include font(14px, 17px, 300);
+      color: $dark-gray;
+      margin-top: 48px;
+      max-width: 554px;
+      text-align: center;
+
+      @include mobile {
+        @include font(14px, 20px);
+        margin-top: 31px;
+      }
+    }
+
+    .features__price {
+      @include font(24px, 29px, 300);
+      color: $dark-pink;
+      margin-top: 32px;
+      position: relative;
+
+      &:before {
+        content: "";
+        width: 641px;
+        height: 1px;
+        background-color: $dark-gray;
+        position: absolute;
+        bottom: -65px;
+        right: -300px;
+
+        @include mobile {
+          width: 420px;
+          bottom: -65px;
+          right: -175px;
+        }
+      }
+    }
+  }
+
+  .features__check {
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      margin-left: 0px;
+    }
+
+    .features__check-lists {
+      display: flex;
+
+      .features__check-items {
+        @include font(14px, 17px);
+        margin-right: 28px;
+        cursor: pointer;
+
+        @include mobile {
+          @include font(10px, 12px);
+        }
+
+        .features__check-button {
+          display: flex;
+          text-transform: uppercase;
+          border: none;
+          background-color: transparent;
+          margin-left: 10px;
+          position: relative;
+          // min-height: 20px;
+          cursor: pointer;
+
+          & .features__icon {
+            margin-top: 3px;
+            margin-left: 7px;
+          }
+
+          &:hover {
+            color: $dark-pink;
+
+            .features__icon {
+              fill: $dark-pink;
+            }
+          }
+
+          &:hover + .features__check-list {
+            display: block;
+          }
+        }
+
+        .features__check-list {
+          padding-top: 10px;
+          padding-left: 10px;
+          width: 80px;
+          height: auto;
+          background: $white;
+          display: none;
+          content: "";
+          position: absolute;
+          z-index: 1;
+          box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+
+          &:hover {
+            display: block;
+          }
+
+          .features__check-input {
+            margin-bottom: 6px;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &:hover + .features__check-label {
+              color: $dark-pink;
+            }
+          }
+
+          .features__check-label {
+            text-transform: uppercase;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .features__item-button {
+    margin-top: 49px;
+    align-self: center;
+    padding: 7px;
+    min-width: 140px;
+    position: relative;
+    @include font(14px, 17px, normal);
+    text-align: end;
+    color: $dark-pink;
+    border: 2px solid $dark-pink;
+    cursor: pointer;
+    background: none;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+
+    &:hover {
+      outline-style: none;
+      background: $dark-pink;
+      color: $white;
+      transform: scale(1.03);
+
+      .features__item-svg {
+        fill: $white;
+      }
+    }
+
+    .features__item-svg {
+      fill: $dark-pink;
+      padding-right: 10px;
+    }
+  }
+}

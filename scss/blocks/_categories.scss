@@ -28,18 +28,22 @@
 
     &--woman {
       background-image: url(../img/forwomen.jpg);
+      background-color: $dark-gray;
     }
 
     &--man {
       background-image: url(../img/formen.jpg);
+      background-color: $dark-gray;
     }
 
     &--kids {
       background-image: url(../img/forkids.jpg);
+      background-color: $dark-gray;
     }
 
     &--accessories {
       background-image: url(../img/accesories.jpg);
+      background-color: $dark-gray;
       width: 100%;
       min-height: 180px;
       margin-top: 30px;
@@ -57,12 +61,12 @@
   }
 
   .categories__text {
-    @include font (16px, 19px);
+    @include font(16px, 19px);
     color: $white;
   }
 
   .categories__heading {
-    @include font (24px, 29px, 700);
+    @include font(24px, 29px, 700);
     color: $dark-pink;
   }
 }

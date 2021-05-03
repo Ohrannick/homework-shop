@@ -1,6 +1,7 @@
 .footer-top {
   min-height: 448px;
   background-image: url(../img/footer.jpg);
+  background-color: $light-gray;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -29,39 +30,39 @@
     }
 
     .footer-top__item-text {
-      @include font (20px, 24px);
+      @include font(20px, 24px);
       margin-top: 10px;
 
       @include tablet {
-        @include font (19px, 23px);
+        @include font(19px, 23px);
       }
     }
 
     .footer-top__heading {
       margin-top: 25px;
-      @include font (24px, 38px, 700);
+      @include font(24px, 38px, 700);
       text-transform: uppercase;
 
       @include tablet {
-        @include font (18px, 28px, 700);
+        @include font(18px, 28px, 700);
       }
 
       @include mobile {
-        @include font (24px, 37px, 700);
+        @include font(24px, 37px, 700);
       }
     }
 
     .footer-top__sub-heading {
-      @include font (18px, 30px);
+      @include font(18px, 30px);
       text-transform: uppercase;
       display: block;
 
       @include tablet {
-        @include font (18px, 29px);
+        @include font(18px, 29px);
       }
 
       @include mobile {
-        @include font (14px, 22px);
+        @include font(14px, 22px);
       }
     }
 
@@ -102,7 +103,7 @@
         background-color: $dark-pink;
         color: $white;
         padding: 20px;
-        @include font (14px, 17px, normal);
+        @include font(14px, 17px, normal);
         cursor: pointer;
 
         &:focus,
@@ -128,15 +129,53 @@
 
     @include mobile {
       flex-direction: column-reverse;
-      padding-top: 43px;
+      padding-top: 23px;
       padding-bottom: 9px;
     }
+    // Анимация
+    // @keyframes move {
+    //   0% {
+    //     margin: 0;
+    //   }
+    //   25% {
+    //     margin: 15px 0 0 10px;
+    //     transform: rotate(4deg);
+    //   }
+    //   50% {
+    //     margin: 30px 0 0 30px;
+    //     transform: rotate(0deg);
+    //   }
+    //   75% {
+    //     margin: 15px 0 0 50px;
+    //     transform: rotate(-4deg);
+    //   }
+    //   100% {
+    //     margin: 0 0 0 70px;
+    //     transform: rotate(0deg);
+    //   }
+    // }
 
-    .footer-bottom__copyright {
-      @include font (16px, 19px, normal);
-      color: $light-gray;
+    .footer-bottom__text {
+      // animation: move 2s 4;
+      // animation-timing-function: steps(10);
+      // animation-direction: alternate-reverse;
+      // animation-fill-mode: forwards;
+
+      // &:hover {
+      //   animation-play-state: paused;
+      // }
+
+      .footer-bottom__copyright {
+        @include font(16px, 19px, normal);
+        color: $light-gray;
+
+        @include mobile {
+          margin-top: 10px;
+        }
+      }
     }
   }
+
   .footer-bottom__list {
     display: flex;
 
@@ -148,6 +187,8 @@
       width: 18px;
       height: 18px;
       padding: 5px;
+      box-sizing: content-box;
+      transition: fill 0.5s;
 
       &:hover,
       &:focus {
@@ -167,6 +208,8 @@
       width: 18px;
       height: 18px;
       padding: 5px;
+      box-sizing: content-box;
+      transition: fill 0.5s, background 0.5s;
 
       &:hover,
       &:focus {
@@ -180,4 +223,3 @@
     }
   }
 }
-

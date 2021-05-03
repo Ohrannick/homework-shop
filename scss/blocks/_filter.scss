@@ -9,12 +9,12 @@
   }
 
   @include mobile {
-    @include font (12px, 14px);
+    @include font(12px, 14px);
   }
 
   .filter__menu {
     display: flex;
-    @include font (14px, 17px, 600);
+    @include font(14px, 17px, 600);
 
     .filter__heading {
       cursor: default;
@@ -39,8 +39,9 @@
         cursor: pointer;
       }
 
-      &:hover+.filter__nav {
-        display: block;
+      &:hover + .filter__nav {
+        // display: block;
+        transform: translateX(0);
       }
 
       .filter__icon {
@@ -53,8 +54,10 @@
   }
 
   .filter__nav {
-    display: none;
-    content: '';
+    // display: none;
+    transform: translateX(-900px);
+    transition: transform 0.7s;
+    content: "";
     position: absolute;
     min-width: 360px;
     height: auto;
@@ -65,17 +68,17 @@
     box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
 
     &:hover {
-      display: block;
+      // display: block;
+      transform: translateX(0);
     }
 
     .filter__nav-items {
       display: flex;
       flex-direction: column;
-
     }
 
     .filter__nav-links {
-      @include font (14px, 17px);
+      @include font(14px, 17px);
       text-transform: uppercase;
       margin-bottom: 20px;
       margin-top: 20px;
@@ -87,7 +90,7 @@
 
       &:before {
         position: absolute;
-        content: '';
+        content: "";
         width: 5px;
         height: 30px;
         background-color: $dark-pink;
@@ -97,16 +100,16 @@
 
       &:after {
         position: absolute;
-        content: '';
+        content: "";
         width: 327px;
         left: -10px;
         top: 30px;
-        border: 1px solid #EBEBEB;
+        border: 1px solid #ebebeb;
       }
     }
 
     .filter__nav-list {
-      @include font (14px, 17px, 400);
+      @include font(14px, 17px, 400);
       color: $gray-mid;
       padding-top: 15px;
 
@@ -134,7 +137,7 @@
       display: flex;
 
       .filter__check-items {
-        @include font (14px, 17px);
+        @include font(14px, 17px);
         margin-right: 28px;
         cursor: pointer;
 
@@ -153,8 +156,17 @@
             margin-left: 7px;
           }
 
-          &:hover+.filter__check-list {
-            display: block;
+          &:hover {
+            color: $dark-pink;
+
+            .filter__icon {
+              fill: $dark-pink;
+            }
+          }
+
+          &:hover + .filter__check-list {
+            // display: block;
+            transform: translateY(0);
           }
         }
 
@@ -164,20 +176,32 @@
           width: 80px;
           height: auto;
           background: $white;
-          display: none;
-          content: '';
+          // display: none;
+          transform: translateY(-400px);
+          transition: transform 0s;
+          content: "";
           position: absolute;
           top: 290px;
           z-index: 1;
           box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
 
           &:hover {
-            display: block;
+            // display: block;
+            transform: translateY(0);
           }
 
           .filter__check-input {
             margin-bottom: 6px;
             margin-right: 10px;
+            cursor: pointer;
+
+            &:hover + .filter__check-label {
+              color: $dark-pink;
+            }
+          }
+
+          .filter__check-label {
+            text-transform: uppercase;
             cursor: pointer;
           }
         }

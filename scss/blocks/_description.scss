@@ -1,0 +1,45 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  max-width: 50%;
+  @include font(24px, 29px, 300);
+  color: $black;
+
+  @include tablet {
+    @include font(16px, 19px, 300);
+    max-width: 354px;
+  }
+
+  @include mobile {
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+
+  .description__heading {
+    text-transform: uppercase;
+  }
+
+  .description__text {
+    margin: 22px 0 22px 0;
+
+    @include tablet {
+      margin-bottom: 28px;
+    }
+  }
+
+  .description__item {
+    margin: 0 0 22px 55px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: -50px;
+      background-image: url(../img/check.svg);
+      width: 20px;
+      height: 16px;
+    }
+  }
+}
