@@ -367,13 +367,29 @@ body {
 }
 
 .categories__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  grid-gap: 30px;
+  grid-template-areas: "box-1 box-2 box-3" "box-4 box-4 box-4";
+}
+
+@media (max-width: 1440px) {
+  .categories__list {
+    min-height: 168px;
+    grid-template-columns: repeat(3, 30%);
+  }
+}
+
+@media (max-width: 766px) {
+  .categories__list {
+    min-height: 247px;
+    margin-bottom: 32px;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-areas: "box-1" "box-2" "box-3" "box-4";
+  }
 }
 
 .categories__list .categories__item {
-  width: 360px;
   min-height: 260px;
   background-size: cover;
   display: flex;
@@ -382,46 +398,32 @@ body {
   justify-content: center;
   text-transform: uppercase;
   background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media (max-width: 1440px) {
-  .categories__list .categories__item {
-    width: 32%;
-    min-height: 168px;
-  }
-}
-
-@media (max-width: 766px) {
-  .categories__list .categories__item {
-    width: 100%;
-    min-height: 247px;
-    margin-bottom: 32px;
-  }
 }
 
 .categories__list .categories__item--woman {
+  grid-area: box-1;
   background-image: url(../img/forwomen.jpg);
   background-color: #5D5D5D;
 }
 
 .categories__list .categories__item--man {
+  grid-area: box-2;
   background-image: url(../img/formen.jpg);
   background-color: #5D5D5D;
 }
 
 .categories__list .categories__item--kids {
+  grid-area: box-3;
   background-image: url(../img/forkids.jpg);
   background-color: #5D5D5D;
 }
 
 .categories__list .categories__item--accessories {
+  grid-area: box-4;
   background-image: url(../img/accesories.jpg);
   background-color: #5D5D5D;
   width: 100%;
   min-height: 180px;
-  margin-top: 30px;
-  margin-bottom: 0;
 }
 
 @media (max-width: 1440px) {
@@ -433,7 +435,6 @@ body {
 @media (max-width: 766px) {
   .categories__list .categories__item--accessories {
     min-height: 111px;
-    margin-top: 0;
   }
 }
 
