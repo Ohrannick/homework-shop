@@ -1,7 +1,7 @@
 .products {
   display: flex;
   flex-direction: column;
-  margin-top: 97px; 
+  margin-top: 97px;
   margin-bottom: 95px;
   max-width: 1140px;
 
@@ -17,13 +17,13 @@
 }
 
 .products__heading {
-  @include font (30px, 36px, normal);
+  @include font(30px, 36px, normal);
   text-align: center;
   color: $dark-blue;
 }
 
 .products__text {
-  @include font (14px, 17px, normal);
+  @include font(14px, 17px, normal);
   text-align: center;
   color: $gray;
 }
@@ -59,7 +59,7 @@
   }
 
   .products__item-shadow {
-    content: '';
+    content: "";
     width: 100%;
     min-height: 420px;
     position: absolute;
@@ -71,12 +71,12 @@
   .products__item-button {
     padding: 10px;
     min-width: 140px;
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include font (14px, 17px, normal);
+    @include font(14px, 17px, normal);
     text-align: end;
     color: $white;
     border: 2px solid $white;
@@ -84,7 +84,7 @@
     background: none;
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       background-image: url(../img/basket-icon.svg);
       background-repeat: no-repeat;
@@ -101,19 +101,19 @@
     background: $light-gray;
 
     .products__item-heading {
-      @include font (13px, 16px, normal);
+      @include font(13px, 16px, normal);
       text-transform: uppercase;
       color: $black;
     }
 
     .products__item-text {
-      @include font (14px, 17px, 300);
+      @include font(14px, 17px, 300);
       color: $dark-gray;
       padding: 13px 0 18px 0;
     }
 
     .products__item-price {
-      @include font (16px, 19px, normal);
+      @include font(16px, 19px, normal);
       color: $dark-pink;
     }
   }
@@ -123,18 +123,22 @@
   width: 211px;
   padding: 20px;
   box-sizing: border-box;
-  @include font (16px, 19px, normal);
+  @include font(16px, 19px, normal);
   align-self: center;
   color: $dark-pink;
   background: none;
   border: 1px solid $dark-pink;
   margin-top: 19px;
   cursor: pointer;
+  transition: background 1s, transform 1s, color 1s;
+  // transform: translate(20px, 20px);
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     outline-style: none;
     background: $dark-pink;
     color: $white;
+    transform: scale(1.03);
   }
 }
 

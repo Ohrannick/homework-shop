@@ -30,11 +30,11 @@
     }
 
     .registration__form-text {
-      @include font (16px, 19px, 300);
+      @include font(16px, 19px, 300);
     }
 
     .registration__form-input {
-      @include font (13px, 16px, 300);
+      @include font(13px, 16px, 300);
       border: 2px solid $light-pink;
       min-height: 30px;
       color: $mid-gray;
@@ -49,7 +49,7 @@
     }
 
     .registration__form-gender {
-      @include font (11px, 13px, 300);
+      @include font(11px, 13px, 300);
       color: $black;
       margin: 35px 0 35px -20px;
     }
@@ -57,7 +57,7 @@
     .registration__form-radio-input {
       display: none;
 
-      &:checked+.registration__form-radio-label {
+      &:checked + .registration__form-radio-label {
         &:after {
           background: $light-pink;
         }
@@ -70,7 +70,7 @@
       cursor: pointer;
 
       &:after {
-        content: '';
+        content: "";
         width: 15px;
         height: 15px;
         border: 1px solid;
@@ -82,7 +82,7 @@
     }
 
     .registration__form-help {
-      @include font (13px, 16px, 300);
+      @include font(13px, 16px, 300);
       color: $mid-gray;
       margin: 16px 0 39px 0;
     }
@@ -91,13 +91,14 @@
       padding: 15px;
       min-width: 167px;
       align-self: flex-start;
-      @include font (14px, 17px, normal);
+      @include font(14px, 17px, normal);
       text-align: center;
       text-transform: uppercase;
       background-color: $dark-pink;
       color: $white;
       border: 2px solid $dark-pink;
       cursor: pointer;
+      transition: background 0.7s, transform 0.7s, color 0.7s;
 
       .registration__form-icon {
         padding-left: 10px;
@@ -109,56 +110,11 @@
       &:hover {
         background-color: transparent;
         color: $dark-pink;
+        transform: scale(1.05);
 
         .registration__form-icon {
           fill: $dark-pink;
         }
-      }
-    }
-  }
-  
-  .description {
-    display: flex;
-    flex-direction: column;
-    margin-top: 64px;
-    max-width: 50%;
-    @include font (24px, 29px, 300);
-    color: $black;
-
-    @include tablet {
-      @include font (16px, 19px, 300);
-      max-width: 354px;
-    }
-
-    @include mobile {
-      margin-top: 40px;
-      margin-bottom: 100px;
-    }
-
-    .description__heading {
-      text-transform: uppercase;
-    }
-
-    .description__text {
-      margin: 22px 0 22px 0;
-
-      @include tablet {
-        margin-bottom: 28px;
-      }
-    }
-
-    .description__item {
-      margin: 0 0 22px 55px;
-      position: relative;
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 3px;
-        left: -50px;
-        background-image: url(../img/check.svg);
-        width: 20px;
-        height: 16px;
       }
     }
   }

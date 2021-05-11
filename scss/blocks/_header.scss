@@ -19,8 +19,10 @@
 
   .header__logo {
     margin: 0 41px 0 0;
+    transition: opacity 1s;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       opacity: 0.8;
     }
 
@@ -32,8 +34,10 @@
   .header__icon {
     cursor: pointer;
     fill: $white;
+    transition: fill 1s;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       fill: $dark-pink;
     }
 
@@ -48,20 +52,23 @@
     min-height: 75px;
     position: relative;
 
-    &:hover+.header__nav {
-      display: block;
+    &:hover + .header__nav {
+      // display: block;
+      transform: translateX(0);
     }
   }
 
   .header__nav {
-    content: '';
+    content: "";
     position: absolute;
     min-width: 400px;
     background: $white;
     top: 75px;
     left: auto;
     z-index: 1;
-    display: none;
+    // display: none;
+    transform: translateX(900px);
+    transition: transform 0.7s;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 
     @include mobile {
@@ -70,7 +77,8 @@
     }
 
     &:hover {
-      display: block;
+      // display: block;
+      transform: translateX(0);
     }
   }
 
@@ -90,7 +98,7 @@
 
   .header__title {
     display: flex;
-    @include font (14px, 17px, bold);
+    @include font(14px, 17px, bold);
     margin: 37px 0 5px 34px;
     text-transform: uppercase;
     cursor: default;
@@ -103,7 +111,7 @@
   }
 
   .nav__item {
-    @include font (14px, 17px, normal);
+    @include font(14px, 17px, normal);
   }
 
   .nav-item__link {
@@ -121,7 +129,7 @@
 
   .nav-item__sub-item {
     display: flex;
-    @include font (16px, 17px, normal);
+    @include font(16px, 17px, normal);
     padding-bottom: 20px;
     color: $dark-gray;
 
@@ -131,5 +139,3 @@
     }
   }
 }
-
-
